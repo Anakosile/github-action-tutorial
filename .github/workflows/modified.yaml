@@ -19,8 +19,8 @@ jobs:
       - name: echo "Intro"
         run: echo "Wassup niggas"
     
-    second_job:
-      runs-on: ubuntu-24.04
-      steps:
-        - name: neggie
-          run: echo "Hello neggies"
+  second_job:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: neggie
+        run: echo "Hello neggies"
