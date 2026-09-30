@@ -1,9 +1,10 @@
-name: workflow, jobs, steps and names
+name: workflow, jobs, steps and names (SHOW BITCH)
 
 on: 
   push:
-    branch:
-      -master
+    branches:
+      - master
+      - dev
 
   pull_request:
   
@@ -19,8 +20,8 @@ jobs:
       - name: echo "Intro"
         run: echo "Wassup niggas"
     
-    second_job:
-      runs-on: ubuntu-24.04
-      steps:
-        - name: neggie
-          run: echo "Hello neggies"
+  second_job:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: neggie
+        run: echo "Hello neggies"
