@@ -2,8 +2,9 @@ name: workflow, jobs, steps and names
 
 on: 
   push:
-    branch:
-      -master
+    branches:
+      - master
+      - dev
 
   pull_request:
   
