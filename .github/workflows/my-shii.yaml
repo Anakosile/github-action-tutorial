@@ -1,0 +1,16 @@
+on:
+  workflow_dispatch:
+
+jobs:
+
+  use-bash:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "This command is running from bash"
+      - run: echo "Hello niggas"
+  
+  use-python:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: print('Hello niggas')
+        shell: python
