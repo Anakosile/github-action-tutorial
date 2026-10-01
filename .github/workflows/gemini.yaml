@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  name: Practice on env variables
 
   generate_data:
+    name: Practice on env variables
     runs-on: ubuntu-24.04
     outputs:
       secret_word: $ {{ steps.first_job.outputs.word }}
