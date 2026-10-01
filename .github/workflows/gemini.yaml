@@ -4,10 +4,12 @@ on:
   push:
   workflow_dispatch:
 
+run-name: Gemini excercise
+
 jobs:
 
   generate_data:
-    name: Practice on env variables
+    name: first step
     runs-on: ubuntu-24.04
     outputs:
       secret_word: $ {{ steps.first_job.outputs.word }}
@@ -18,9 +20,9 @@ jobs:
           magic=Matrix
 
           echo " word=${magic} >> $GITHUB_OUTPUT "
-          echo " secret word is ${word} and ${magic} "
 
   recieve_data:
+    name: second step
     runs-on: ubuntu-24.04
     needs: generate_data
     steps:
