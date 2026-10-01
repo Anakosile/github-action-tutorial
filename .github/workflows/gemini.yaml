@@ -1,0 +1,28 @@
+name: Practice
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  name: Practice on env variables
+
+  generate_data:
+    runs-on: ubuntu-24.04
+    outputs:
+      secret_word: $ {{ steps.first_job.outputs.word }}
+    steps:
+      - id: first_job
+        name: Set variable here
+        run: |
+          magic=Matrix
+
+          echo " word=${magic} >> $GITHUB_OUTPUT "
+          echo " secret word is ${word} and ${magic} "
+
+  recieve_data:
+    runs-on: ubuntu-24.04
+    needs: generate_data
+    steps:
+      - run: echo " the secret word is ${{ needs.generate_data.outputs.secret_word }} "
+      
