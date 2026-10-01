@@ -12,14 +12,14 @@ jobs:
     name: first step
     runs-on: ubuntu-24.04
     outputs:
-      secret_word: $ {{ steps.first_job.outputs.word }}
+      secret_word: ${{ steps.first_job.outputs.word }}
     steps:
       - id: first_job
         name: Set variable here
         run: |
           magic=Matrix
 
-          echo " word=${magic} >> $GITHUB_OUTPUT "
+          echo "word=${magic}" >> "$GITHUB_OUTPUT" 
 
   recieve_data:
     name: second step
