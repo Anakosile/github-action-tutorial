@@ -1,5 +1,8 @@
 name: Consistency
 
+on:
+  - push
+  
 run-name: click me
 
 jobs:
