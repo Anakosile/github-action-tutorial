@@ -1,7 +1,6 @@
 name: Practice
 
 on:
-  push:
   workflow_dispatch:
 
 run-name: Gemini excercise
