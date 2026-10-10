@@ -1,2 +1,21 @@
 name: auth w AWS
 
+on:
+  workflow_dispatch:
+
+run-name: authenticating w AWS
+
+permissions: 
+  contents: read
+  id-token: write
+
+jobs:
+  Auth:
+    name: Connecting to AWS
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Connect w d oidc token
+        uses: aws-actions/configure-aws-credentials@v6.3.0
+        with:
+          aws-region: us-east-1
+          role-to-assume: arn:aws:iam::264267065910:role/github-action-role
