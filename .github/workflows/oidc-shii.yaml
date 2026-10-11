@@ -3,8 +3,6 @@ name: auth w AWS
 on:
   workflow_dispatch:
 
-run-name: authenticating w AWS
-
 permissions: 
   contents: read
   id-token: write
