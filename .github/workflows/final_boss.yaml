@@ -1,7 +1,6 @@
 name: Consistency
 
-on:
-  - push
+on: [ workflow_dispatch ]
   
 run-name: click me
 
